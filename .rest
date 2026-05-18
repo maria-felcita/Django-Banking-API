@@ -1,0 +1,75 @@
+### Register
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "vishnu",
+    "password": "vishnu@123",
+    "email": "vishnu@email.com",
+    "role": "customer"
+}
+
+### Token
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username": "rudra",
+    "password": "rudra@123"
+}
+
+### Profile
+GET http://127.0.0.1:8000/api/profile/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwMzE4LCJpYXQiOjE3NzQxNjY3MTgsImp0aSI6IjZlZWE4ZTEyZTI5ZDQyMGFhNTc0ZTEwNTA1MzU1YzdiIiwidXNlcl9pZCI6IjMifQ.MYKF01iVT2PPOJYOSII40NtYIpOotoykYkXJ27T3ujQ
+
+### All Users
+GET http://127.0.0.1:8000/api/admin/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczNDg5MjA4LCJpYXQiOjE3NzM0ODU2MDgsImp0aSI6Ijc5NzViZWVmYWUxNTQ0MjU5MmE3ZTkyYTIwYmUzZjk4IiwidXNlcl9pZCI6IjQifQ.SZ6C6VqZ15S1LYncgFgm6j3z11XtZmkXfk2UVhog2Hg
+
+### Manager Dashboard
+GET http://127.0.0.1:8000/api/manager/dashboard/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczNDg5MjA4LCJpYXQiOjE3NzM0ODU2MDgsImp0aSI6Ijc5NzViZWVmYWUxNTQ0MjU5MmE3ZTkyYTIwYmUzZjk4IiwidXNlcl9pZCI6IjQifQ.SZ6C6VqZ15S1LYncgFgm6j3z11XtZmkXfk2UVhog2Hg
+
+### Create Account
+POST http://127.0.0.1:8000/api/accounts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczNDkwMTA1LCJpYXQiOjE3NzM0ODY1MDUsImp0aSI6ImQ1YmYzYTEwMWQxZTQxMTFiMWU0MWVlMzgzNGNkMzIxIiwidXNlcl9pZCI6IjQifQ.3WKAuyniQCvevZHbU0cyPUtQjI1KJ37AsmDLpx9h4no
+
+### View Account
+GET http://127.0.0.1:8000/api/accounts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNTYwLCJpYXQiOjE3NzQxNjY5NjAsImp0aSI6IjUyNWM3ZDEwYzY0NzQ5ZTA5NzkwZTQ2ZmFhM2JmOGYzIiwidXNlcl9pZCI6IjIifQ.v7cn-v_SxN9DX_zdm7yVbfI5HfC1Q7FhRSCpGqC73v0
+
+### Deposit
+POST http://127.0.0.1:8000/api/deposit/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNTYwLCJpYXQiOjE3NzQxNjY5NjAsImp0aSI6IjUyNWM3ZDEwYzY0NzQ5ZTA5NzkwZTQ2ZmFhM2JmOGYzIiwidXNlcl9pZCI6IjIifQ.v7cn-v_SxN9DX_zdm7yVbfI5HfC1Q7FhRSCpGqC73v0
+Content-Type: application/json
+
+{
+    "amount": 10000
+}
+
+### Balance
+GET http://127.0.0.1:8000/api/accounts/2/balance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNzY0LCJpYXQiOjE3NzQxNjcxNjQsImp0aSI6IjU5MTc0MmIwM2RjZDQ5NmY5MWI3NGZjNWUzMmZkMjY3IiwidXNlcl9pZCI6IjIifQ.fL5ip1MCW_TR2jM4pYWIEuJRQEZxs-BCePcWVQUNZ40
+
+### Transfer
+POST http://127.0.0.1:8000/api/transfer/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNjkxLCJpYXQiOjE3NzQxNjcwOTEsImp0aSI6ImQ5MTFjNGNlZWQ2ZjQyMDhhMmU3YjYwZTAzNjU4YmZiIiwidXNlcl9pZCI6IjMifQ.h9VnGsl0p2Bt31SvaFfgqaYCV-EiqiKkv_NwlmJ6sI8
+Content-Type: application/json
+
+{
+    "to_account_id": 2,
+    "amount": 20000,
+    "idempotency_key": "TXN001"
+}
+
+### Transcation History
+GET http://127.0.0.1:8000/api/transactions/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNjkxLCJpYXQiOjE3NzQxNjcwOTEsImp0aSI6ImQ5MTFjNGNlZWQ2ZjQyMDhhMmU3YjYwZTAzNjU4YmZiIiwidXNlcl9pZCI6IjMifQ.h9VnGsl0p2Bt31SvaFfgqaYCV-EiqiKkv_NwlmJ6sI8
+
+###
+GET http://127.0.0.1:8000/api/transactions/?type=credit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNjkxLCJpYXQiOjE3NzQxNjcwOTEsImp0aSI6ImQ5MTFjNGNlZWQ2ZjQyMDhhMmU3YjYwZTAzNjU4YmZiIiwidXNlcl9pZCI6IjMifQ.h9VnGsl0p2Bt31SvaFfgqaYCV-EiqiKkv_NwlmJ6sI8
+
+###
+GET http://127.0.0.1:8000/api/transactions/?type=debit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc0MTcwNjkxLCJpYXQiOjE3NzQxNjcwOTEsImp0aSI6ImQ5MTFjNGNlZWQ2ZjQyMDhhMmU3YjYwZTAzNjU4YmZiIiwidXNlcl9pZCI6IjMifQ.h9VnGsl0p2Bt31SvaFfgqaYCV-EiqiKkv_NwlmJ6sI8
